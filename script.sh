@@ -21,7 +21,7 @@ cd /
 npm install -g create-react-app || die
 create-react-app /react-app || die
 
-# Java test.
-# ???
+# JQ test.
+curl -i -X POST --header "Content-Type: text/xml" -d '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Header><ns5:ContractVersion xmlns:ns5="http://schemas.navitaire.com/WebServices" xmlns="http://schemas.navitaire.com/WebServices/DataContracts/Utilities">1</ns5:ContractVersion></soap:Header><soap:Body><ns2:GetMarketListRequest xmlns="http://schemas.navitaire.com/WebServices/DataContracts/Utilities" xmlns:ns2="http://schemas.navitaire.com/WebServices/ServiceContracts/UtilitiesService" /></soap:Body></soap:Envelope>' https://jqtestr3xapi.navitaire.com/UtilitiesManager.svc || die
 
 echo "SUCCESS"
